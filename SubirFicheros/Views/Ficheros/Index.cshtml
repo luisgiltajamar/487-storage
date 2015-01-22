@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           <img src="@item.Uri" style="max-width: 300px;"/>
+        </td>
+    </tr>
+}
+
+</table>
